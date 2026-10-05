@@ -4,7 +4,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from public_kaggle_experiment.scripts.audit_kaggle_dataset import (
+from scripts.audit_kaggle_dataset import (
     EXPECTED_CLASSES,
     create_metadata,
     discover_classes,

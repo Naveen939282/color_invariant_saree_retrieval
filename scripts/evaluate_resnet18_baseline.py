@@ -28,10 +28,10 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
-from public_kaggle_experiment.scripts.create_color_invariance_manifest import (  # noqa: E402
+from scripts.create_color_invariance_manifest import (  # noqa: E402
     read_canonical_rows,
 )
-from public_kaggle_experiment.src.baseline_metrics import (  # noqa: E402
+from src.baseline_metrics import (  # noqa: E402
     assert_query_gallery_identity_match,
     build_verification_scores,
     cosine_similarity_matrix,
@@ -39,12 +39,12 @@ from public_kaggle_experiment.src.baseline_metrics import (  # noqa: E402
     select_validation_f1_threshold,
     verification_metrics,
 )
-from public_kaggle_experiment.src.color_transforms import (  # noqa: E402
+from src.color_transforms import (  # noqa: E402
     TRANSFORMATION_CONFIG,
     TRANSFORMATION_NAMES,
     apply_color_transform,
 )
-from public_kaggle_experiment.src.resnet18_baseline import (  # noqa: E402
+from src.resnet18_baseline import (  # noqa: E402
     FrozenResNet18Baseline,
 )
 

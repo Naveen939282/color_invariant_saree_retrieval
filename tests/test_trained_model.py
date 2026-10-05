@@ -2,20 +2,20 @@ import unittest
 
 import torch
 
-from public_kaggle_experiment.scripts.train_color_invariant import _score_split
-from public_kaggle_experiment.src.contrastive_learning import (
+from scripts.train_color_invariant import _score_split
+from src.contrastive_learning import (
     checkpoint_is_better,
     deterministic_training_transform,
     pair_identity_labels,
     supervised_contrastive_loss,
     validate_identity_splits,
 )
-from public_kaggle_experiment.src.trained_model import ColorInvariantEmbeddingModel
+from src.trained_model import ColorInvariantEmbeddingModel
 
 
 class TrainedModelTests(unittest.TestCase):
     def test_overall_non_identity_recall_keeps_similarity_identity_alignment(self):
-        from public_kaggle_experiment.src.color_transforms import TRANSFORMATION_NAMES
+        from src.color_transforms import TRANSFORMATION_NAMES
 
         identities = [f"candidate-{index}" for index in range(5)]
         rows = [

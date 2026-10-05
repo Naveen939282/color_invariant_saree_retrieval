@@ -9,7 +9,7 @@ from typing import Any
 import torch
 from torch.nn import functional as F
 
-from public_kaggle_experiment.src.color_transforms import TRANSFORMATION_NAMES
+from src.color_transforms import TRANSFORMATION_NAMES
 
 
 TRAINING_TRANSFORMATIONS = tuple(

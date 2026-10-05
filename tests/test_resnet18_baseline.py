@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 import torch
 
-from public_kaggle_experiment.src.baseline_metrics import (
+from src.baseline_metrics import (
     assert_query_gallery_identity_match,
     build_verification_scores,
     cosine_similarity_matrix,
@@ -11,7 +11,7 @@ from public_kaggle_experiment.src.baseline_metrics import (
     select_validation_f1_threshold,
     verification_metrics,
 )
-from public_kaggle_experiment.src.resnet18_baseline import FrozenResNet18Baseline
+from src.resnet18_baseline import FrozenResNet18Baseline
 
 
 class FrozenEmbeddingTests(unittest.TestCase):

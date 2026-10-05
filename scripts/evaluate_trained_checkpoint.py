@@ -17,10 +17,10 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
-from public_kaggle_experiment.scripts.create_color_invariance_manifest import (  # noqa: E402
+from scripts.create_color_invariance_manifest import (  # noqa: E402
     read_canonical_rows,
 )
-from public_kaggle_experiment.scripts.evaluate_resnet18_baseline import (  # noqa: E402
+from scripts.evaluate_resnet18_baseline import (  # noqa: E402
     EXPECTED_IDENTITIES,
     _load_csv,
     encode_records,
@@ -30,16 +30,16 @@ from public_kaggle_experiment.scripts.evaluate_resnet18_baseline import (  # noq
     validate_test_gallery,
     validate_transform_manifest,
 )
-from public_kaggle_experiment.scripts.train_color_invariant import (  # noqa: E402
+from scripts.train_color_invariant import (  # noqa: E402
     _baseline_comparison,
     _score_split,
     _write_csv,
     _write_json,
     _write_report,
 )
-from public_kaggle_experiment.src.color_transforms import TRANSFORMATION_NAMES  # noqa: E402
-from public_kaggle_experiment.src.contrastive_learning import validate_identity_splits  # noqa: E402
-from public_kaggle_experiment.src.trained_model import ColorInvariantEmbeddingModel  # noqa: E402
+from src.color_transforms import TRANSFORMATION_NAMES  # noqa: E402
+from src.contrastive_learning import validate_identity_splits  # noqa: E402
+from src.trained_model import ColorInvariantEmbeddingModel  # noqa: E402
 
 
 def _read_history(path: Path) -> list[dict[str, Any]]:

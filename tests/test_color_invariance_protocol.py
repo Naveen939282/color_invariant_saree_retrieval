@@ -4,14 +4,14 @@ from pathlib import Path
 
 from PIL import Image
 
-from public_kaggle_experiment.scripts.create_canonical_images import select_canonical_rows
-from public_kaggle_experiment.scripts.create_color_invariance_manifest import (
+from scripts.create_canonical_images import select_canonical_rows
+from scripts.create_color_invariance_manifest import (
     build_test_gallery,
     build_test_verification_pairs,
     build_transform_manifest,
     read_canonical_rows,
 )
-from public_kaggle_experiment.src.color_transforms import (
+from src.color_transforms import (
     TRANSFORMATION_CONFIG,
     TRANSFORMATION_NAMES,
     apply_color_transform,

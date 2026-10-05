@@ -26,10 +26,10 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
-from public_kaggle_experiment.scripts.create_color_invariance_manifest import (  # noqa: E402
+from scripts.create_color_invariance_manifest import (  # noqa: E402
     read_canonical_rows,
 )
-from public_kaggle_experiment.scripts.evaluate_resnet18_baseline import (  # noqa: E402
+from scripts.evaluate_resnet18_baseline import (  # noqa: E402
     CanonicalTransformDataset,
     EXPECTED_IDENTITIES,
     _load_csv,
@@ -40,7 +40,7 @@ from public_kaggle_experiment.scripts.evaluate_resnet18_baseline import (  # noq
     validate_test_gallery,
     validate_transform_manifest,
 )
-from public_kaggle_experiment.src.baseline_metrics import (  # noqa: E402
+from src.baseline_metrics import (  # noqa: E402
     assert_query_gallery_identity_match,
     build_verification_scores,
     cosine_similarity_matrix,
@@ -48,11 +48,11 @@ from public_kaggle_experiment.src.baseline_metrics import (  # noqa: E402
     select_validation_f1_threshold,
     verification_metrics,
 )
-from public_kaggle_experiment.src.color_transforms import (  # noqa: E402
+from src.color_transforms import (  # noqa: E402
     TRANSFORMATION_CONFIG,
     TRANSFORMATION_NAMES,
 )
-from public_kaggle_experiment.src.contrastive_learning import (  # noqa: E402
+from src.contrastive_learning import (  # noqa: E402
     TRAINING_TRANSFORMATIONS,
     checkpoint_is_better,
     deterministic_training_transform,
@@ -60,7 +60,7 @@ from public_kaggle_experiment.src.contrastive_learning import (  # noqa: E402
     supervised_contrastive_loss,
     validate_identity_splits,
 )
-from public_kaggle_experiment.src.trained_model import (  # noqa: E402
+from src.trained_model import (  # noqa: E402
     ColorInvariantEmbeddingModel,
 )
 
